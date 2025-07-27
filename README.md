@@ -17,9 +17,9 @@ A machine learning model that predicts food delivery times based on various fact
 
 ## 📊 Model Performance
 
-- Mean Absolute Error (MAE): 7.05 minutes
-- Root Mean Squared Error (RMSE): 9.87
-- R² Score: 0.77
+ MAE (Mean Absolute Error) : 7.05 min , On average, predictions are about 7 minutes off from actual delivery time. 
+
+  R² Score (Coefficient of Determination) : 0.77 , Model explains 77% of the variation in delivery times. 
 
 ## 🔧 Installation
 
@@ -81,6 +81,8 @@ print(f"Predicted Delivery Time: {prediction[0]} minutes")
 
 ## 📝 Dataset Description
 
+This project uses the [Food Delivery Time Prediction dataset](https://www.kaggle.com/datasets/denkuznetz/food-delivery-time-prediction) from Kaggle. 
+
 The model is trained on a dataset containing the following features:
 - Distance_km: Distance in kilometers
 - Weather: Weather conditions (Clear, Rainy, Windy, Foggy, Snowy)
@@ -99,3 +101,27 @@ The model is trained on a dataset containing the following features:
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📊 Model Performance
+
+| Metric | Value | What It Means |
+|--------|--------|--------------|
+| 📉 MAE (Mean Absolute Error) | 7.05 min | On average, predictions are just about 7 minutes off from actual delivery time. That's like being only one ad break late — not bad at all! |
+| 📊 MSE (Mean Squared Error) | 97.51 | Shows how the model handles big errors — it punishes them more. Reduced from 156 to 97, showing significant improvement. |
+| 📈 RMSE (Root Mean Squared Error) | 9.87 min | Most predictions fall within ~10 minutes of actual delivery time. For a real-world delivery model, that's pretty solid. |
+| 🎯 R² Score (Coefficient of Determination) | 0.77 | Model explains 77% of the variation in delivery times. Significantly better than baseline predictions! |
+
+
+## 💫 Streamlit Web App
+
+The project includes a user-friendly web interface built with Streamlit. To run the app:
+
+```bash
+streamlit run app.py
+```
+
+Features:
+- Interactive input form for delivery parameters
+- Real-time predictions
+- Visualization of prediction factors
+- Historical prediction logging
