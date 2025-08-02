@@ -1,10 +1,6 @@
 import streamlit as st
 import numpy as np
-import pickle
 
-# Load model and encoders
-model = pickle.load(open("model.pkl", "rb"))
-labels = pickle.load(open("label_encoders.pkl", "rb"))
 
 # App title
 st.title(" Food Delivery Time Predictor")
